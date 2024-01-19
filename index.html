@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            xs: "360px", // min-width
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>BlackJack</title>
+  </head>
+  <body class="font-serif">
+    <header class="text-gray-300 body-font">
+      <div
+        class="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center"
+      >
+        <a
+          class="flex title-font font-medium items-center text-gray-900 md:mb-0"
+        >
+          <img
+            src="https://i.pinimg.com/564x/5e/cb/e4/5ecbe480f2ef634b7158a7a7350fceec.jpg"
+            alt="logo"
+            class="h-10 p-1 object-center rounded-full"
+          />
+          <span class="ml-3 text-xl">BlackJack</span>
+        </a>
+        <nav
+          class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center"
+        >
+          <button class="mr-5 hover:text-gray-900" id="PedirCarta" disabled>
+            Pedir Carta
+          </button>
+          <button class="mr-5 hover:text-gray-900" id="DetenerMano" disabled>
+            Detener Mano
+          </button>
+        </nav>
+        <button
+          class="inline-flex items-center bg-cyan-700 border-0 py-1 px-3 focus:outline-none hover:bg-cyan-300 hover:text-cyan-900 rounded text-base mt-4 md:mt-0"
+          id="JuegoNuevo"
+        >
+          Jugar de Nuevo
+          <svg
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            class="w-4 h-4 ml-1"
+            viewBox="0 0 24 24"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <section class="text-gray-300 body-font">
+      <h1 class="mx-7 p-4">Jugador - <small>0</small></h1>
+      <div class="container px-5 mx-auto">
+        <div class="flex flex-wrap py-5 divCartas" id="cartas-jugador"></div>
+      </div>
+      <h1 class="mx-7 p-4">computadora - <small>0</small></h1>
+      <div class="container px-5 mx-auto">
+        <div
+          class="flex flex-wrap py-5 divCartas"
+          id="cartas-computadora"
+        ></div>
+      </div>
+    </section>
+    <script src="./assets/js/underscole-min.js"></script>
+    <script src="./assets/js/juego-min.js"></script>
+  </body>
+</html>
